@@ -11,7 +11,8 @@
   body { margin:0; background:var(--bg); color:var(--text); font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
   main { max-width:560px; margin:0 auto; padding:24px 16px 48px; }
   header { text-align:center; margin-bottom:20px; }
-  .eye { width:56px; height:56px; border-radius:50%; margin:0 auto 10px; background:radial-gradient(circle,var(--blue) 0 35%,#0b3d57 36% 60%,#e9e2d8 61%); box-shadow:0 0 18px rgba(92,200,255,.5); }
+  .avatar { width:96px; height:96px; border-radius:50%; object-fit:cover; display:block; margin:0 auto 10px; border:3px solid var(--accent); }
+  .hero { width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:14px; display:block; margin:10px 0 6px; }
   h1 { font-size:1.6rem; margin:0; }
   .sub { color:var(--muted); margin:4px 0 0; }
   .note { background:var(--card); border-left:4px solid var(--accent); border-radius:8px; padding:10px 12px; font-size:.85rem; color:var(--muted); margin:16px 0 24px; }
@@ -29,7 +30,7 @@
 <body>
 <main>
   <header>
-    <div class="eye" aria-hidden="true"></div>
+    <img class="avatar" src="img/avatar.jpg" alt="Sprocket the robot">
     <h1>Sprocket's Parts Bin</h1>
     <p class="sub">The parts behind each 15-second tip 🤖🔧</p>
   </header>
@@ -37,24 +38,28 @@
   <div class="note">As an Amazon Associate I earn from qualifying purchases. The links below are affiliate links — buying through them supports the channel at no extra cost to you. Sprocket is an AI character; these are the parts each tip is about, not personal reviews.</div>
 
   <h2>Start here</h2>
+  <img class="hero" src="img/kit.jpg" alt="Sprocket next to an electronics starter kit" loading="lazy">
   <p class="tip">Everything you need for most of the tips in one box.</p>
   <a class="item" rel="sponsored noopener" target="_blank" href="https://www.amazon.com/dp/B01D8KOZF4?tag=sprocketbuild-20"><span>ELEGOO UNO R3 Super Starter Kit<small>Board, breadboard, LEDs, resistors, buttons, motor and more</small></span><span class="go">View →</span></a>
   <a class="item" rel="sponsored noopener" target="_blank" href="https://www.amazon.com/dp/B01ISAMUA6?tag=sprocketbuild-20"><span>AstroAI Digital Multimeter<small>Check voltage, continuity and resistance</small></span><span class="go">View →</span></a>
 
-  <h2>Motors <span>· tips S001 · S002 · S003 · S006</span></h2>
+  <h2>Motors &amp; power</h2>
+  <img class="hero" src="img/motors.jpg" alt="Sprocket holding a gear motor" loading="lazy">
   <p class="tip">Never drive a motor straight from a pin, give it its own battery, and add a flyback diode.</p>
   <a class="item" rel="sponsored noopener" target="_blank" href="https://www.amazon.com/dp/B07BK1QL5T?tag=sprocketbuild-20"><span>L298N Motor Driver Modules (4 pcs)<small>The pin sends the signal, the driver sends the power</small></span><span class="go">View →</span></a>
   <a class="item" rel="sponsored noopener" target="_blank" href="https://www.amazon.com/dp/B099Z85573?tag=sprocketbuild-20"><span>TT Gear Motors, 1:48 (4 sets)<small>Classic robot-car motors with built-in gearing</small></span><span class="go">View →</span></a>
   <a class="item" rel="sponsored noopener" target="_blank" href="https://www.amazon.com/dp/B07L9M6VZK?tag=sprocketbuild-20"><span>4×AA Battery Holders with Switch (2 pcs)<small>A separate power supply for your motors</small></span><span class="go">View →</span></a>
   <a class="item" rel="sponsored noopener" target="_blank" href="https://www.amazon.com/dp/B07Q5FZR7X?tag=sprocketbuild-20"><span>Diode Assortment Kit<small>Includes rectifier and Schottky diodes for flyback protection</small></span><span class="go">View →</span></a>
 
-  <h2>Inputs &amp; LEDs <span>· tips S004 · S007</span></h2>
+  <h2>Buttons &amp; LEDs</h2>
+  <img class="hero" src="img/leds.jpg" alt="Sprocket holding a glowing LED" loading="lazy">
   <p class="tip">Use INPUT_PULLUP for buttons, and never run an LED without a resistor.</p>
   <a class="item" rel="sponsored noopener" target="_blank" href="https://www.amazon.com/dp/B01MRP025V?tag=sprocketbuild-20"><span>Tactile Push Button Assortment<small>6×6 mm buttons that fit a breadboard</small></span><span class="go">View →</span></a>
   <a class="item" rel="sponsored noopener" target="_blank" href="https://www.amazon.com/dp/B08FD1XVL6?tag=sprocketbuild-20"><span>Resistor Kit, 25 values<small>Includes 220 Ω for standard LEDs on 5 V</small></span><span class="go">View →</span></a>
   <a class="item" rel="sponsored noopener" target="_blank" href="https://www.amazon.com/dp/B073QMYKDM?tag=sprocketbuild-20"><span>5 mm LED Assortment<small>Five colors for status lights and tests</small></span><span class="go">View →</span></a>
 
-  <h2>Boards, power &amp; wiring <span>· tips S005 · S008 · S009</span></h2>
+  <h2>Boards &amp; wiring</h2>
+  <img class="hero" src="img/boards.jpg" alt="Sprocket plugging a USB cable into a dev board" loading="lazy">
   <p class="tip">ESP32 pins are 3.3 V, long breadboards may split their rails, and some USB cables are charge-only.</p>
   <a class="item" rel="sponsored noopener" target="_blank" href="https://www.amazon.com/dp/B0D8T53CQ5?tag=sprocketbuild-20"><span>ELEGOO ESP32 Dev Boards, USB-C (3 pcs)<small>Wi-Fi + Bluetooth microcontroller</small></span><span class="go">View →</span></a>
   <a class="item" rel="sponsored noopener" target="_blank" href="https://www.amazon.com/dp/B07F7W91LC?tag=sprocketbuild-20"><span>Logic Level Converters, 3.3 V ↔ 5 V<small>Connect 5 V sensors to ESP32 safely</small></span><span class="go">View →</span></a>
